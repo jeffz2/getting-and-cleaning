@@ -30,6 +30,8 @@ run_analysis <- function () {
 
   labelIndices <- grep("mean|std|Activity|Subject", colnames(d))
   d <- d[labelIndices]
+  
+  tidy <- aggregate(. ~Subject + Activity, d, mean)
 }
   
   
