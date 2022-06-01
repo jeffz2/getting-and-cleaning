@@ -32,6 +32,7 @@ run_analysis <- function () {
   d <- d[labelIndices]
   
   tidy <- aggregate(. ~Subject + Activity, d, mean)
+  write.table(tidy, file = "tidy.txt", row.names = FALSE)
 }
   
   
